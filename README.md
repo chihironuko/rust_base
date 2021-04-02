@@ -33,3 +33,16 @@ fn main() {
   println!("The value of y is: {}", y);
 }
 ```
+
+- 変数  
+[英語リファレンス(ちょっと変数とは違うけど近しい)](https://doc.rust-lang.org/stable/reference/tokens.html)  
+[日本語リファレンス](https://doc.rust-jp.rs/book-ja/ch03-01-variables-and-mutability.html)  
+変数は標準が不変。  
+可変の変数はmutをつける。  
+多分型は後から変えられないんじゃないかな。判明したらまた追記する。  
+```rust
+//int型、2が入り不変
+let a = 2;
+//int型、1が入り、可変(再代入可)
+let mut b = 1;
+```
