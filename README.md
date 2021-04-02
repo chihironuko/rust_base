@@ -11,6 +11,9 @@ Rustはキャメルケースの書き方なので、RustBase。
 日本語ドキュメント紹介:https://doc.rust-jp.rs/  
 どちらもまだ見られていない。  
 
+Rustコーディングガイド :https://github.com/rust-dev-tools/fmt-rfcs/blob/master/guide/guide.md  
+なんとtabは4スペースらしい。2じゃだめだと。  
+
 ## 把握すべき特徴  
 - 式と文  
 [英語リファレンス](https://doc.rust-lang.org/stable/reference/statements-and-expressions.html)  
