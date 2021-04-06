@@ -4,7 +4,7 @@
 ## next  
 [所有権を理解する](https://doc.rust-jp.rs/book-ja/ch04-00-understanding-ownership.html)  
 
-##cargoと実行  
+## cargoと実行  
 cargoでbuildした際は、実行ファイルはtarget/debugの場所にproject名を名称として作られる  
 当該実行ファイルを"./target/debug/project_name"で実行するか、"cargo run"で実行する。  
 ちなみにcargo runはコンパイルも同時に行ってくれる優れたコマンド。  

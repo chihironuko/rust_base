@@ -15,10 +15,25 @@ Rustは式指向言語。
 Rustコーディングガイド :https://github.com/rust-dev-tools/fmt-rfcs/blob/master/guide/guide.md  
 なんとtabは4スペースらしい。2じゃだめだと。  
 
+## 曖昧  
+- 文字列リテラルとString型  
+違いがあるらしい。後ほど調べる。  
+
 ## 把握すべき特徴  
-- ケース書き分け  
+- ケース書き分けと記法  
 キャメルケースとスネークケースが混在する。  
 [参照](https://sinkuu.github.io/api-guidelines/naming.html)  
+あと、結局何故か分からなかったが、
+```rust  
+let s = "hello";
+```
+のみのコードを作成してコンパイルした際に、
+help: if this is intentional, prefix it with an underscore: `_s`  
+が出力され、sを  
+```rust  
+let _s = "hello";
+```
+とするとwarningが消えた。println等で出力されていない変数にこの警告が出るらしいが、詳細がわかっていない。  
 
 - 式と文  
 [英語リファレンス](https://doc.rust-lang.org/stable/reference/statements-and-expressions.html)  
@@ -62,6 +77,15 @@ b = "wasd";
 let a = "wasd";
 ```
 
+- copyとclone  
+あらゆる整数型、論理値型、浮動小数点型、文字型(char)、これら4つのみからなるタプルはコピーになる。  
+それ以外(String等)はコピーを作成しようとするとmoveになり、コピーを作成する際にはcloneを用いる。  
+また、コピーはデフォルトでdeep copy。shallow copyを行う方法は知らない。多分ない。  
+
+- 変数とdrop  
+}等、関数の終わりのタイミングなどでそのスコープ内で所有権のある変数のdrop(メモリ返還)が行われる。  
+参照を渡された場合は、所有権は移らないためdropしないが、ムーブの場合は所有権が移るためdropする。  
+
 - クレート  
 コンパイルが行われる単位。  
 モジュール等が独立にコンパイル<F3>荒れることはないが、それぞれのクレートは互いに独立にコンパイルされる。  
@@ -70,6 +94,5 @@ let a = "wasd";
 - 日本語文字列について  
 コンパイルする際にソースコードのコメント中以外に日本語を入力(出力文字列等)すると、コンパイルに失敗することがあるらしいため、できるだけ英語で記述を行う。  
 [注釈: The programming language Rust第1版の翻訳者によると、 ソースコードのコメント中以外に日本語文字があるとコンパイルに失敗することがあるそうなので、文字列の英語は、コメントに和訳を載せます。 また、重複する内容の場合には、最初の1回だけ掲載するようにします。](https://doc.rust-jp.rs/book-ja/ch02-00-guessing-game-tutorial.html)  
-
 
 
