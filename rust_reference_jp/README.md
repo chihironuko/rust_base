@@ -2,7 +2,7 @@
 日本語版リファレンスを追う。  
 
 ## next  
-[数あてゲーム](https://doc.rust-jp.rs/book-ja/ch02-00-guessing-game-tutorial.html)  
+[所有権を理解する](https://doc.rust-jp.rs/book-ja/ch04-00-understanding-ownership.html)  
 
 ##cargoと実行  
 cargoでbuildした際は、実行ファイルはtarget/debugの場所にproject名を名称として作られる  
