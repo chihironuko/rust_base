@@ -2,6 +2,7 @@
 私のRust学習帳(基礎)  
 Rustはキャメルケースの書き方なので、RustBase。  
 Rustは式指向言語。  
+[stability without stagnation](https://doc.rust-lang.org/book/appendix-07-nightly-rust.html#stability-without-stagnation): 停滞しない安定性の提供がモットー。  
 
 ## Documents  
 英語リファレンス   :https://doc.rust-lang.org/stable/reference/introduction.html  
@@ -14,6 +15,23 @@ Rustは式指向言語。
 
 Rustコーディングガイド :https://github.com/rust-dev-tools/fmt-rfcs/blob/master/guide/guide.md  
 なんとtabは4スペースらしい。2じゃだめだと。  
+
+## rustのバージョン管理について  
+rustupを使っている。最も推奨されている。  
+
+## rustコンパイラサポート  
+[reference](https://doc.rust-lang.org/nightly/rustc/platform-support.html)  
+コンパイラの対応するプラットフォームは"確実に動作する"、Tier1から"ベストエフォート"のTier3までの段階がある。  
+
+## rustのリリースバージョン  
+- stable  
+安定版。プロジェクト作成に向く。  
+
+- beta  
+リリース予定、リリース前のバージョン。バク探しに役立ちたい時に使ってみる。  
+
+- nightly  
+不安定版。バグが多かったり、こんな機能どう？がふんだんにある感じっぽい？  
 
 ## 曖昧  
 - 文字列リテラルとString型  
