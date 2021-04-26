@@ -1,6 +1,5 @@
 # RustBase  
 私のRust学習帳(基礎)  
-Rustはキャメルケースの書き方なので、RustBase。  
 Rustは式指向言語。  
 [stability without stagnation](https://doc.rust-lang.org/book/appendix-07-nightly-rust.html#stability-without-stagnation): 停滞しない安定性の提供がモットー。  
 
