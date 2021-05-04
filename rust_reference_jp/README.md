@@ -2,7 +2,7 @@
 日本語版リファレンスを追う。  
 
 ## next  
-[所有権を理解する](https://doc.rust-jp.rs/book-ja/ch04-00-understanding-ownership.html)  
+[Enumとパターンマッチング](https://doc.rust-jp.rs/book-ja/ch06-00-enums.html)  
 
 ## cargoと実行  
 cargoでbuildした際は、実行ファイルはtarget/debugの場所にproject名を名称として作られる  
